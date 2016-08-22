@@ -13,6 +13,10 @@
 		FDFB68641D3D9BCD00DA1614 /* waterfalls_coredatatesting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDFB68621D3D9BCD00DA1614 /* waterfalls_coredatatesting.xcdatamodeld */; };
 		FDFB68661D3D9BCD00DA1614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFB68651D3D9BCD00DA1614 /* Assets.xcassets */; };
 		FDFB68691D3D9BCD00DA1614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFB68671D3D9BCD00DA1614 /* LaunchScreen.storyboard */; };
+		FDFB68741D3EEEE500DA1614 /* AddWaterFallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB68731D3EEEE500DA1614 /* AddWaterFallVC.swift */; };
+		FDFB68771D3EFCF400DA1614 /* Waterfalls+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB68751D3EFCF400DA1614 /* Waterfalls+CoreDataProperties.swift */; };
+		FDFB68781D3EFCF400DA1614 /* Waterfalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB68761D3EFCF400DA1614 /* Waterfalls.swift */; };
+		FDFB687A1D3F01D500DA1614 /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFB68791D3F01D500DA1614 /* WaterfallCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		FDFB68651D3D9BCD00DA1614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDFB68681D3D9BCD00DA1614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDFB686A1D3D9BCD00DA1614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDFB68731D3EEEE500DA1614 /* AddWaterFallVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWaterFallVC.swift; sourceTree = "<group>"; };
+		FDFB68751D3EFCF400DA1614 /* Waterfalls+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Waterfalls+CoreDataProperties.swift"; path = "../Waterfalls+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FDFB68761D3EFCF400DA1614 /* Waterfalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Waterfalls.swift; path = ../Waterfalls.swift; sourceTree = "<group>"; };
+		FDFB68791D3F01D500DA1614 /* WaterfallCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +64,10 @@
 		FDFB685A1D3D9BCD00DA1614 /* waterfalls-coredatatesting */ = {
 			isa = PBXGroup;
 			children = (
+				FDFB68721D3EEEB400DA1614 /* Controller */,
+				FDFB68711D3EEEA900DA1614 /* View */,
+				FDFB68701D3EEEA200DA1614 /* Model */,
 				FDFB685B1D3D9BCD00DA1614 /* AppDelegate.swift */,
-				FDFB685D1D3D9BCD00DA1614 /* ViewController.swift */,
 				FDFB685F1D3D9BCD00DA1614 /* Main.storyboard */,
 				FDFB68651D3D9BCD00DA1614 /* Assets.xcassets */,
 				FDFB68671D3D9BCD00DA1614 /* LaunchScreen.storyboard */,
@@ -65,6 +75,32 @@
 				FDFB68621D3D9BCD00DA1614 /* waterfalls_coredatatesting.xcdatamodeld */,
 			);
 			path = "waterfalls-coredatatesting";
+			sourceTree = "<group>";
+		};
+		FDFB68701D3EEEA200DA1614 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDFB68751D3EFCF400DA1614 /* Waterfalls+CoreDataProperties.swift */,
+				FDFB68761D3EFCF400DA1614 /* Waterfalls.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FDFB68711D3EEEA900DA1614 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDFB68791D3F01D500DA1614 /* WaterfallCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FDFB68721D3EEEB400DA1614 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FDFB685D1D3D9BCD00DA1614 /* ViewController.swift */,
+				FDFB68731D3EEEE500DA1614 /* AddWaterFallVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFB68781D3EFCF400DA1614 /* Waterfalls.swift in Sources */,
 				FDFB68641D3D9BCD00DA1614 /* waterfalls_coredatatesting.xcdatamodeld in Sources */,
 				FDFB685E1D3D9BCD00DA1614 /* ViewController.swift in Sources */,
+				FDFB687A1D3F01D500DA1614 /* WaterfallCell.swift in Sources */,
 				FDFB685C1D3D9BCD00DA1614 /* AppDelegate.swift in Sources */,
+				FDFB68741D3EEEE500DA1614 /* AddWaterFallVC.swift in Sources */,
+				FDFB68771D3EFCF400DA1614 /* Waterfalls+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

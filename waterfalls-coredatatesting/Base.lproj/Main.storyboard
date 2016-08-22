@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IcP-s1-kGU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="waterfalls_coredatatesting" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,183 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="93" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J0H-jt-occ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WaterfallCell" rowHeight="93" id="YPx-gU-opi" customClass="WaterfallCell" customModule="waterfalls_coredatatesting" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YPx-gU-opi" id="8kJ-du-MzS">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V3P-kv-h5p">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TAHITI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKj-Qb-hhJ">
+                                                    <rect key="frame" x="0.0" y="35" width="600" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="V8C-mA-juF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="24"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="V3P-kv-h5p" firstAttribute="leading" secondItem="8kJ-du-MzS" secondAttribute="leading" id="1JB-ua-gbk"/>
+                                                <constraint firstItem="V3P-kv-h5p" firstAttribute="top" secondItem="8kJ-du-MzS" secondAttribute="top" id="AIk-tc-tj9"/>
+                                                <constraint firstItem="aKj-Qb-hhJ" firstAttribute="centerY" secondItem="8kJ-du-MzS" secondAttribute="centerY" id="lbG-14-YBi"/>
+                                                <constraint firstAttribute="trailing" secondItem="V3P-kv-h5p" secondAttribute="trailing" id="lz4-m6-aO0"/>
+                                                <constraint firstItem="aKj-Qb-hhJ" firstAttribute="centerX" secondItem="8kJ-du-MzS" secondAttribute="centerX" id="mFY-dT-yk9"/>
+                                                <constraint firstAttribute="trailing" secondItem="aKj-Qb-hhJ" secondAttribute="trailing" id="p0V-S6-rF0"/>
+                                                <constraint firstAttribute="bottom" secondItem="V3P-kv-h5p" secondAttribute="bottom" id="qhR-nK-1ul"/>
+                                                <constraint firstItem="aKj-Qb-hhJ" firstAttribute="leading" secondItem="8kJ-du-MzS" secondAttribute="leading" id="yYC-bp-4jS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="aKj-Qb-hhJ" id="udl-l4-Zu1"/>
+                                            <outlet property="waterfallImg" destination="V3P-kv-h5p" id="cjO-yr-t5i"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J0H-jt-occ" secondAttribute="bottom" id="0s4-gp-Frx"/>
+                            <constraint firstAttribute="trailing" secondItem="J0H-jt-occ" secondAttribute="trailing" id="KPg-ye-gcg"/>
+                            <constraint firstItem="J0H-jt-occ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nc2-sd-iHs"/>
+                            <constraint firstItem="J0H-jt-occ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zTD-Yw-rid"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Rfi-S6-AH9">
+                        <barButtonItem key="rightBarButtonItem" title="+ NEW" id="7pm-l5-dlb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="zmi-7J-fNA" kind="show" id="L6y-N4-Fvo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="J0H-jt-occ" id="9BB-io-RbU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1192" y="350"/>
+        </scene>
+        <!--Add Water FallVC-->
+        <scene sceneID="452-5J-N7h">
+            <objects>
+                <viewController id="zmi-7J-fNA" customClass="AddWaterFallVC" customModule="waterfalls_coredatatesting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9al-Ok-RAv"/>
+                        <viewControllerLayoutGuide type="bottom" id="nxM-hh-6xG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h8C-LC-u5b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Waterfall title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bst-ZO-pYt">
+                                <rect key="frame" x="20" y="105" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Waterfall location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQl-R0-q94">
+                                <rect key="frame" x="20" y="159" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Waterfall description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nuR-iU-Gjn">
+                                <rect key="frame" x="20" y="215" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="waterfall-kanchana_3176020a-large" translatesAutoresizingMaskIntoConstraints="NO" id="T0F-LZ-Hgx">
+                                <rect key="frame" x="200" y="287" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="c9L-Xs-lPo"/>
+                                    <constraint firstAttribute="height" constant="200" id="cyk-4d-XHA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hge-Qy-iCg">
+                                <rect key="frame" x="200" y="287" width="200" height="200"/>
+                                <state key="normal" title="ADD IMG"/>
+                                <connections>
+                                    <action selector="addImgBttnPressd:" destination="zmi-7J-fNA" eventType="touchUpInside" id="iWv-rs-6eX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApT-Ak-WLB">
+                                <rect key="frame" x="237" y="520" width="127" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LQd-ya-pAg"/>
+                                    <constraint firstAttribute="width" constant="127" id="mdx-eO-NFg"/>
+                                </constraints>
+                                <state key="normal" title="Create Waterfall"/>
+                                <connections>
+                                    <action selector="createWaterfallBttnPressd:" destination="zmi-7J-fNA" eventType="touchUpInside" id="Nzi-jf-b5N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tQl-R0-q94" firstAttribute="trailing" secondItem="h8C-LC-u5b" secondAttribute="trailingMargin" id="17Q-XN-mNL"/>
+                            <constraint firstItem="ApT-Ak-WLB" firstAttribute="centerX" secondItem="h8C-LC-u5b" secondAttribute="centerX" id="3bm-rk-Ut2"/>
+                            <constraint firstItem="tQl-R0-q94" firstAttribute="leading" secondItem="h8C-LC-u5b" secondAttribute="leadingMargin" id="63L-Ka-DcN"/>
+                            <constraint firstItem="hge-Qy-iCg" firstAttribute="height" secondItem="T0F-LZ-Hgx" secondAttribute="height" id="E8B-ZC-rGA"/>
+                            <constraint firstItem="tQl-R0-q94" firstAttribute="top" secondItem="bst-ZO-pYt" secondAttribute="bottom" constant="24" id="F0d-Jj-iqM"/>
+                            <constraint firstItem="nuR-iU-Gjn" firstAttribute="top" secondItem="tQl-R0-q94" secondAttribute="bottom" constant="24" id="HM5-M8-e5T"/>
+                            <constraint firstItem="T0F-LZ-Hgx" firstAttribute="centerX" secondItem="h8C-LC-u5b" secondAttribute="centerX" id="HaY-66-TDX"/>
+                            <constraint firstItem="hge-Qy-iCg" firstAttribute="centerX" secondItem="T0F-LZ-Hgx" secondAttribute="centerX" id="NSA-O1-O0V"/>
+                            <constraint firstItem="hge-Qy-iCg" firstAttribute="width" secondItem="T0F-LZ-Hgx" secondAttribute="width" id="O88-z6-bdO"/>
+                            <constraint firstItem="T0F-LZ-Hgx" firstAttribute="top" secondItem="nuR-iU-Gjn" secondAttribute="bottom" constant="42" id="fdk-5X-A5i"/>
+                            <constraint firstItem="ApT-Ak-WLB" firstAttribute="top" secondItem="hge-Qy-iCg" secondAttribute="bottom" constant="33" id="gFK-MJ-add"/>
+                            <constraint firstItem="hge-Qy-iCg" firstAttribute="centerY" secondItem="T0F-LZ-Hgx" secondAttribute="centerY" id="gx7-5Q-kdM"/>
+                            <constraint firstItem="bst-ZO-pYt" firstAttribute="top" secondItem="9al-Ok-RAv" secondAttribute="bottom" constant="41" id="hCp-P5-yn3"/>
+                            <constraint firstItem="nuR-iU-Gjn" firstAttribute="leading" secondItem="h8C-LC-u5b" secondAttribute="leadingMargin" id="klf-Vd-por"/>
+                            <constraint firstItem="bst-ZO-pYt" firstAttribute="trailing" secondItem="h8C-LC-u5b" secondAttribute="trailingMargin" id="ne7-mO-b5h"/>
+                            <constraint firstItem="nuR-iU-Gjn" firstAttribute="trailing" secondItem="h8C-LC-u5b" secondAttribute="trailingMargin" id="qMs-mj-fEo"/>
+                            <constraint firstItem="bst-ZO-pYt" firstAttribute="leading" secondItem="h8C-LC-u5b" secondAttribute="leadingMargin" id="rbn-bp-Mg0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addImgBttn" destination="hge-Qy-iCg" id="V6N-zf-I44"/>
+                        <outlet property="waterfallDescription" destination="nuR-iU-Gjn" id="jRZ-JR-olR"/>
+                        <outlet property="waterfallImage" destination="T0F-LZ-Hgx" id="m2I-Jj-wyg"/>
+                        <outlet property="waterfallLocation" destination="tQl-R0-q94" id="wG9-Sz-MFq"/>
+                        <outlet property="waterfallTitle" destination="bst-ZO-pYt" id="JqY-xH-vwf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPQ-Tr-weL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946" y="350"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RAb-dS-36C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IcP-s1-kGU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W9y-v7-4Xh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.2130976778" green="0.52656250000000004" blue="0.196528746" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yxd-Gv-exV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1n-Tl-IPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="1010"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="waterfall-kanchana_3176020a-large" width="720" height="449"/>
+    </resources>
 </document>
